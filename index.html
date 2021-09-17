@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+    body {
+      display: none;
+    }
+
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    /* Firefox */
+    input[type=number] {
+      -moz-appearance: textfield;
+    }
+  </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <!-- <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script> -->
+</head>
+
+<body>
+
+
+  <div class="container">
+    <div class="row wow fadeIn">
+      <div class="col-lg-6">
+        <p class="h4 text-center mb-4">Sign In</p>
+        <form onsubmit="signIn(); return false">
+          <label for="email">Your email</label>
+          <input type="email" id="email" class="form-control">
+          <label for="password">Your password</label>
+          <input type="password" id="password" class="form-control">
+          <button class="btn btn-primary" type="submit">Sign in</button>
+        </form>
+      </div>
+      <div class="col-lg-6">
+        <form">
+          <p class="h4 text-center mb-4">Sign Up</p>
+          <label for="firstName">Your first name</label>
+          <input type="text" id="firstName" class="form-control">
+          <label for="lastName">Your last name</label>
+          <input type="text" id="lastName" class="form-control">
+          <label for="useremail">Your email</label>
+          <input type="email" id="useremail" class="form-control">
+          <label for="userpassword">Your password</label>
+          <input type="password" id="userpassword" class="form-control">
+          <label for="city">Your city</label>
+          <input type="text" id="city" class="form-control">
+          <label for="country">Your Country</label>
+          <input type="text" id="country" class="form-control">
+          <label for="number">Your Number</label>
+          <input type="number" id="number" class="form-control">
+          <label for="option">Who are you?</label>
+          <select name="" id="option">
+            <option value="Restaurant">Restaurant</option>
+            <option value="User">User</option>
+          </select>
+
+          <div class="text-center mt-4">
+            <input class="btn btn-primary" value="Register" onclick="signUp()">
+            </form>
+          </div>
+      </div>
+    </div>
+    <div>
+      file:
+      <input type="file" name="" id="fil">
+      <input type="button" onclick="fil()">
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
