@@ -1,12 +1,3 @@
-const firebaseConfig = {
-    apiKey: "AIzaSyCxnlbJh2Bo5BQwHnYd-QVwzGy6KdR3wxg",
-    authDomain: "practice-fea67.firebaseapp.com",
-    projectId: "practice-fea67",
-    storageBucket: "practice-fea67.appspot.com",
-    messagingSenderId: "191631931916",
-    appId: "1:191631931916:web:7f2489116c0b251ff44c29",
-    measurementId: "G-WZD2RVXLC1"
-};
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
@@ -15,10 +6,6 @@ const db = firebase.firestore();
 
 firebase.auth().onAuthStateChanged((user) => {
     if (user) {
-        // document.write("loggin in...")
-        // setTimeout(() => {
-        //     window.location.href = "login.html";
-        // }, 1000);
         const user = firebase.auth().currentUser;
         const fName = document.getElementById("firstName").value;
         const lName = document.getElementById("lastName").value;
@@ -30,7 +17,7 @@ firebase.auth().onAuthStateChanged((user) => {
         docRef.get().then((doc) => {
             if (doc.exists) {
                 if (doc.data().status == "User")
-                    window.location.href = "login.html";
+                    window.location.href = "user.html";
                 else
                     window.location.href = "admin.html";
             } else {
@@ -40,7 +27,7 @@ firebase.auth().onAuthStateChanged((user) => {
                     .then(() => {
                         alert("Account sucesfully created!");
                         if (status == "User")
-                            window.location.href = "login.html";
+                            window.location.href = "user.html";
                         else
                             window.location.href = "admin.html";
                     })
